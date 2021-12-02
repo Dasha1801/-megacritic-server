@@ -4,7 +4,7 @@ module.exports = (app) => {
   const router = require("express").Router();
 
   router.post("/thumbs", thumbs.createThumbs);
-  router.get("/thumbs", thumbs.findThumbs);
+  router.post("/userThumbs", thumbs.findUserThumbs);
 
   app.use("/api/reviews", router);
 };
