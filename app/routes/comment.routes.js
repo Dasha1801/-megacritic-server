@@ -4,7 +4,8 @@ module.exports = (app) => {
   const router = require("express").Router();
 
   router.post("/comments", comments.createComment);
-  router.get("/comments", comments.findComments);
+  router.post("/allComments", comments.findComments);
 
   app.use("/api/reviews", router);
 };
+
