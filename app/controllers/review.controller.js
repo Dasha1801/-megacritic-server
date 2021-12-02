@@ -40,6 +40,7 @@ exports.findAllReviews = (req, res) => {
     });
 };
 
+
 exports.findAllBooks = (req, res) => {
   Review.findAll({
     where: {
@@ -144,3 +145,4 @@ exports.delete = (req, res) => {
       });
     });
 };
+
