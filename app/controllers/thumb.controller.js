@@ -38,8 +38,10 @@ exports.createThumbs = async (req, res) => {
   }
 };
 
-exports.findThumbs = (req, res) => {
-  Thumbs.findAll()
+
+exports.findUserThumbs = (req, res) => {
+  const { uid } = req.body;
+  Thumbs.findAll({ where: { reviewUid: uid } })
     .then((data) => {
       res.send(data);
     })
