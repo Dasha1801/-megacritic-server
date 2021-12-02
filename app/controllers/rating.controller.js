@@ -36,12 +36,14 @@ exports.createRating = async (req, res) => {
   }
 };
 
-exports.findRatings = (req, res) => {
-  Rating.findAll()
+exports.findRating = (req, res) => {
+  const { id } = req.body;
+  Rating.findAll({ where: { reviewId: id } })
     .then((data) => {
       res.send(data);
     })
     .catch((err) => {
-      console.log(">> Error while finding rating: ", err);
+      console.log(">> Error while finding thumbs: ", err);
     });
 };
+
