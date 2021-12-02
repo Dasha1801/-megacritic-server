@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 
-var corsOptions = {
+const corsOptions = {
   origin: "https://megacritic.netlify.app",
   // origin: "http://localhost:3000",
 };
