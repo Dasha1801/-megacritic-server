@@ -4,7 +4,7 @@ module.exports = (app) => {
   const router = require("express").Router();
 
   router.post("/ratings", ratings.createRating);
-  router.get("/ratings", ratings.findRatings);
-
+  router.post("/ratingsReview", ratings.findRating);
+ 
   app.use("/api/reviews", router);
 };
