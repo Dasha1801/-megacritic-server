@@ -35,3 +35,4 @@ exports.findAllWords = (req, res) => {
       });
     });
 };
+
