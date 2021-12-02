@@ -16,11 +16,13 @@ exports.createComment = (req, res) => {
 };
 
 exports.findComments = (req, res) => {
-  Comment.findAll()
+  const { reviewId } = req.body;
+  Comment.findAll({ where: { reviewId: reviewId } })
     .then((data) => {
       res.send(data);
     })
     .catch((err) => {
-      console.log(">> Error while finding comment: ", err);
+      console.log(">> Error while finding thumbs: ", err);
     });
 };
+
